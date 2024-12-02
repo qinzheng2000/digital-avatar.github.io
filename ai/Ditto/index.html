@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Ditto: Motion-Space Diffusion for Controllable Realtime Talking Head Synthesis</title>
+        <link rel="stylesheet" href="static/css/bulma.min.css">
+        <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+        <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+        <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="./asserts/style.css" rel="stylesheet">
+    </head>
+</html>
+
+<body>
+
+    <div class="content">
+        <h1><strong> Ditto: Motion-Space Diffusion for Controllable Realtime Talking Head Synthesis </strong></h1>
+
+        <p id="authors" class="serif">
+            <a>Tianqi Li<sup></sup></a>,
+            <a>Ruobing Zheng<sup>†<dag></dag></sup></a>,
+            <a>Minghui Yang<sup></sup></a>,
+            <a>Jingdong Chen<sup></sup></a>,
+            <a>Ming Yang<sup></sup></a> <br>
+            <span style="font-size: 18px; margin-top: 0.8em">
+                <sup>†</sup>Corresponding Author.
+            </span>
+            <br>
+            <span style="font-size: 18px; margin-top: 0.8em">
+                Ant Group.
+            </span>
+        </p>
+        
+        <div class="column-flex">
+            <div class="flex flex-gap" style="margin-bottom:0.5em;">
+                <a target="_blank" href="https://arxiv.org/abs/2411.19509" ><button><i class="ai ai-arxiv"></i> Paper</button></a>
+                <a target="_blank" href=""><button><i class="fa fa-github"></i> Code (coming soon)</button></a>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <video style="width: 100%; object-fit: cover;" controls>
+                <source src="asserts/videos/full_body_en.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        
+          
+
+    </div>
+
+    <div class="content">
+        <h2 style="text-align:center"><strong>Abstract</strong></h2>
+
+        <div id="teasers">
+            <img src="./asserts/framework.png", style="width: 100%;">
+            <figcaption></figcaption>
+        </div>
+
+        <p>
+            Recent advances in diffusion models have revolutionized audio-driven talking head synthesis. Beyond precise lip synchronization, diffusion-based methods excel in generating subtle expressions and natural head movements that are well-aligned with the audio signal. However, these methods are confronted by slow inference speed, insufficient fine-grained control over facial motions, and occasional visual artifacts largely due to an implicit latent space derived from Variational Auto-Encoders (VAE), which prevent their adoption in realtime interaction applications. To address these issues, we introduce Ditto, a diffusion-based framework that enables controllable realtime talking head synthesis. Our key innovation lies in bridging motion generation and photorealistic neural rendering through an explicit identity-agnostic motion space, replacing conventional VAE representations. This design substantially reduces the complexity of diffusion learning while enabling precise control over the synthesized talking heads. We further propose an inference strategy that jointly optimizes three key components: audio feature extraction, motion generation, and video synthesis. This optimization enables streaming processing, realtime inference, and low first-frame delay, which are the functionalities crucial for interactive applications such as AI assistants. Extensive experimental results demonstrate that Ditto generates compelling talking head videos and substantially outperforms existing methods in both motion control and realtime performance.
+        </p>
+
+    </div>
+
+    <div class="content">
+        <h2 style="text-align: center;"><strong>Gallery</strong></h2>
+
+        <h3>Multi-Style Images Driven by Broadcast Audio.</h3>
+        <div class="gallery">
+            <div class="row">
+                <video style="width: 33%; object-fit: cover;" controls>
+                    <source src="asserts/videos/13.mp4" type="video/mp4">
+                </video>
+                <video style="width: 33%; object-fit: cover;" controls>
+                    <source src="asserts/videos/12.mp4" type="video/mp4">
+                </video>
+                <video style="width: 33%; object-fit: cover;" controls>
+                    <source src="asserts/videos/11.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <h3>Multi-Style Images Driven by Singing Audio.</h3>
+        <div class="gallery">
+            <div class="row">
+                <video style="width: 33%; object-fit: cover;" controls>
+                    <source src="asserts/videos/23.mp4" type="video/mp4">
+                </video>
+                <video style="width: 33%; object-fit: cover;" controls>
+                    <source src="asserts/videos/21.mp4" type="video/mp4">
+                </video>
+                <video style="width: 33%; object-fit: cover;" controls>
+                    <source src="asserts/videos/22.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <h3>Fine-grained Control:  Gaze, Headpose, Emotion</h3>
+        <div class="row">
+            <video style="width: 100%; object-fit: cover;" controls>
+              <source src="asserts/videos/ctrl_cat.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+
+        <!-- <h3>Full-body Portrait (English)</h3>
+        <div class="row">
+            <video style="width: 100%; object-fit: cover;" controls>
+              <source src="asserts/videos/full_body_en.mp4" type="video/mp4">
+            </video>
+        </div> -->
+
+        <h3>Full-body Portrait (Chinese)</h3>
+        <div class="row">
+            <video style="width: 100%; object-fit: cover;" controls>
+              <source src="asserts/videos/full_body_zh.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- <h3>Fine-grained Control:  Gaze, Headpose, Emotion</h3>
+        <div class="gallery">
+            <div class="row">
+
+                <img src="./asserts/videos/luna_crop.png", style="width: 24%;">
+                <video style="width: 24%; object-fit: cover;" controls>
+                    <source src="asserts/videos/ctrl_look_right.mp4" type="video/mp4">
+                </video>
+                <video style="width: 24%; object-fit: cover;" controls>
+                    <source src="asserts/videos/ctrl_look_left.mp4" type="video/mp4">
+                </video>
+                <video style="width: 24%; object-fit: cover;" controls>
+                    <source src="asserts/videos/ctrl_sad.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div> -->
+
+    </div>
+
+    <div class="content">
+        <h2 style="text-align:center; margin: 0 auto;"><strong>BibTex</strong></h2>
+        <code>@article{li2024ditto,<br>
+            title={Ditto: Motion-Space Diffusion for Controllable Realtime Talking Head Synthesis},<br>
+            author={Tianqi Li, Ruobing Zheng, Minghui Yang, Jingdong Chen, Ming Yang},<br>
+            year={2024},<br>
+            eprint={2411.19509},<br>
+            archivePrefix={arXiv},<br>
+            primaryClass={cs.CV}<br>
+         </code>
+    </div>
+
+</body>
