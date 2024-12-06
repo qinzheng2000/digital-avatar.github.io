@@ -42,7 +42,7 @@
 
             <br>
 
-            <div class="row">
+            <div class="row" style="border: 1px solid #a3a3a3; border-radius: 4px;">
                 <video style="width: 100%; object-fit: cover;" controls>
                     <source src="asserts/videos/full_body_en.mp4" type="video/mp4">
                 </video>
@@ -61,7 +61,7 @@
                 <figcaption></figcaption>
             </div>
 
-            <p>
+            <p style="line-height: 30px;">
                 Recent advances in diffusion models have revolutionized audio-driven talking head synthesis. Beyond precise lip synchronization, diffusion-based methods excel in generating subtle expressions and natural head movements that are well-aligned with the audio signal. However, these methods are confronted by slow inference speed, insufficient fine-grained control over facial motions, and occasional visual artifacts largely due to an implicit latent space derived from Variational Auto-Encoders (VAE), which prevent their adoption in realtime interaction applications. To address these issues, we introduce Ditto, a diffusion-based framework that enables controllable realtime talking head synthesis. Our key innovation lies in bridging motion generation and photorealistic neural rendering through an explicit identity-agnostic motion space, replacing conventional VAE representations. This design substantially reduces the complexity of diffusion learning while enabling precise control over the synthesized talking heads. We further propose an inference strategy that jointly optimizes three key components: audio feature extraction, motion generation, and video synthesis. This optimization enables streaming processing, realtime inference, and low first-frame delay, which are the functionalities crucial for interactive applications such as AI assistants. Extensive experimental results demonstrate that Ditto generates compelling talking head videos and substantially outperforms existing methods in both motion control and realtime performance.
             </p>
 
@@ -143,16 +143,16 @@
 
         <div class="content">
             <h2 style="text-align:center; margin: 0 auto;"><strong>BibTex</strong></h2>
-            <code>
-                @article{li2024ditto,<br>
-                &nbsp; title={Ditto: Motion-Space Diffusion for Controllable Realtime Talking Head Synthesis},<br>
-                &nbsp; author={Tianqi Li, Ruobing Zheng, Minghui Yang, Jingdong Chen, Ming Yang},<br>
-                &nbsp; year={2024},<br>
-                &nbsp; eprint={2411.19509},<br>
-                &nbsp; archivePrefix={arXiv},<br>
-                &nbsp; primaryClass={cs.CV}<br>
-                }
-            </code>
+            <div class="bibtex" style="font-size: 15px;">
+                <code>
+                    @article{li2024ditto,<br>
+                    &nbsp; title={Ditto: Motion-Space Diffusion for Controllable Realtime Talking Head Synthesis},<br>
+                    &nbsp; author={Li, Tianqi and Zheng, Ruobing and Yang, Minghui and Chen, Jingdong and Yang, Ming},<br>
+                    &nbsp; journal={arXiv preprint arXiv:2411.19509},<br>
+                    &nbsp; year={2024}<br>
+                    }
+                </code>
+            </div>
         </div>
 
         <footer style="text-align: center; font-size: medium; color: blueviolet;">
